@@ -8,4 +8,6 @@ import java.util.UUID;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<UsuarioModel, UUID> {
+    //Declaração por findByEmail para validar se existe um usuário com mesmo email
+    UsuarioModel findByEmail(String email);
 }
